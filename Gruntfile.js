@@ -57,8 +57,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
 
-  grunt.registerTask('test', ['jshint', 'mocha']);
+  //grunt.registerTask('test', ['jshint', 'mocha']);
 
-  grunt.registerTask('default', ['jshint', 'mocha', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'uglify']);
 
 };
