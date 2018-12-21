@@ -10,8 +10,8 @@ How To Use
 Simply use invoke the object and use the functions...
 
 	var cal = ics();
-	cal.addEvent(subject, description, location, begin, end);
-	cal.addEvent(subject, description, location, begin, end); // yes, you can have multiple events :-)
+	cal.addEvent(id, subject, description, location, begin, end);
+	cal.addEvent(id, subject, description, location, begin, end); // yes, you can have multiple events :-)
     cal.download(filename);
 
 `begin` and `end` need to be formatted in a way that is friendly to `Date()`
@@ -21,7 +21,7 @@ Recurring Events
 ----------------
 Recurring events can be added with the `rrule` object.
 
-`cal.addEvent(subject, description, location, begin, end, rrule)`
+`cal.addEvent(id, subject, description, location, begin, end, rrule)`
 
 The `rrule` object has the following properties:
 
@@ -41,8 +41,8 @@ Example
 ```
 <script>
 	var cal = ics();
-	cal.addEvent('Demo Event', 'This is an all day event', 'Nome, AK', '8/7/2013', '8/7/2013');
-	cal.addEvent('Demo Event', 'This is thirty minute event', 'Nome, AK', '8/7/2013 5:30 pm', '8/7/2013 6:00 pm');
+	cal.addEvent(null, 'Demo Event', 'This is an all day event', 'Nome, AK', '8/7/2013', '8/7/2013');
+	cal.addEvent(12, 'Demo Event', 'This is thirty minute event', 'Nome, AK', '8/7/2013 5:30 pm', '8/7/2013 6:00 pm');
 </script>
 <a href="javascript:cal.download()">Demo</a>
 ```
